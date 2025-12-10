@@ -1,0 +1,12 @@
+_BASE_: ../maskformer2_R50_bs16_50ep.yaml
+MODEL:
+  BACKBONE:
+    NAME: "DiveSeg_Backbone"
+  VIT_ADAPTER:
+    FINETUNE: False
+    NAME: 'vitb'
+    VIT_WEIGHT: "./checkpoints/dinov2_vitb14_pretrain.pth"
+    FREEZE_VIT: True
+  PIXEL_MEAN: [81.022, 113.771, 117.232]
+  PIXEL_STD: [60.591, 58.505, 62.858]
+OUTPUT_DIR: "./output/USIS10K_I_base"
