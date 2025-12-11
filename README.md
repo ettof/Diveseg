@@ -27,6 +27,9 @@ cd ..
 git clone https://github.com/ettof/Diveseg.git
 cd Diveseg
 pip install -r requirements.txt
+cd mask2former/modeling/pixel_decoder/ops
+sh make.sh
+cd ../../../..
 ```
 
 ## Data Preparation & Pre-trained Weights
